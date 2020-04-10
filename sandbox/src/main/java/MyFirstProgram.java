@@ -2,25 +2,17 @@ public class MyFirstProgram{
 
 public static void main(String[] args)
 	{
-		hello("world");
-		hello("user");
-		hello("Alexei");
-		double i = 5;
-		double a = 5;
-		double b = 6;
-		System.out.println(" Ploshad kvadrata so storonoi: "+i+ "=" + area(i));
-		System.out.println(" Ploshad kvadrata so storonoi: "+a+ "*"+b+"=" + area(a,b));
-	}
 
-	public static void hello(String world){
-		System.out.println("Hello, " + world+"!");
-	}
+		Point p1 = new Point();
+		Point p2 = new Point();
+		p1.x = 5;
+		p1.y = 10;
+		p2.x = 2;
+		p2.y = 3;
 
-	public static double area(double dlina){
-		return dlina * dlina;
+		System.out.println("Kоординатами (x1=" + p1.x+":"+ "y1="+p1.y+") и(x2=" + p2.x+":"+ "y2="+p2.y+") равно "+distance(p1, p2));
 	}
-
-	public static double area(double a, double b){
-		return a*b;
+	public static double distance(Point p1, Point p2){
+		return Math.sqrt((p1.x-p2.x)*(p1.x-p2.x)+(p1.y-p2.y)*(p1.y-p2.y));
 	}
 }
